@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" 
-      xmls="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8">
     </head>
     <body>
         
-        <header th:frangment="header" class="header">
-            
-            <a th:href="@{/}"class="logo nav-limk">Tonnexy5hop</a>
+        <header th:fragment="header" class="header">
+            <nav class="nav">
+            <a th:href="@{/}" class="logo nav-link">TechShop</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a th:href="@{/cliente/listado}" class="nav-menu-link">Clientes</a>
+                </li>
+                
+                <li class="nav-menu-item">
+                    <a th:href="@{/categoria/listado}" class="nav-menu-link">Categorias</a>
+                </li>
+                
+                <li class="nav-menu-item">
+                    <a th:href="@{/articulo/listado}" class="nav-menu-link">Articulos</a>
+                </li>
+            </ul>
         </header>
         
-        
-        <footer th:frangment="footer" class="footer">
-            
-            <p>
-                
-                @Copy Derechos Reservados 2022
-            </p>
+        <footer th:fragment="footer" class="footer">
+            <p>&COPY Derechos Reservados 2022</p>
         </footer>
         
     </body>
