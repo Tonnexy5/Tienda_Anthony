@@ -1,38 +1,23 @@
 <!DOCTYPE html>
-<!--
-Pagina web Anthony
--->
+<!--  Esta es nuestra primera página web del curso  -->
 <html lang="es">
     <head>
-        <title>Tonnexy5hop</title>
+        <title>TechShop</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Pagina principal Tonnexy5hop">
-        <meta name="keywords" content="html, css, Tonnexy5hop, Tonnexy5">
-
-        <link href="CSS/Styles.css" rel="stylesheet" type="text/css"/>
-
+        <meta name="description" content="Página principal de la tienda TechShop">
+        <meta name="keywords" content="html5, css, TechShop">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
+    <body> 
         <header>
-            <h1 id="encabezado">Tonnexy5hop</h1>
+            <h1 id="encabezado">TechShop</h1>
         </header>
-
-        <!--                             -->
-
         <nav>
-            <a href="index.html">Home</a>|<a href="Page2.html">Pagina 2</a>
-            |<a href="Page3.html">Pagina 3</a>|<a href="Page4.html">Pagina 4</a>
-            |<a href="Page5.html">Pagina 5</a>|<a href="Page6.html">Pagina 6</a>
-            |<a href="Audios.html">Audio</a>|<a href="Videos.html">Video</a>
-            |<a href="iframe.html">Iframe</a>|<a href="Formulario.html">Formulario</a>
-        </nav>
-
-
+            <a href="ejemplo6.html">Back</a> | <a href="indexRespaldo.html">Home</a> | <a href="ejemplo2.html">Next</a>
+        </nav>        
         <section>
             <h2>Formulario</h2>
-
             <article>
-
                 <header><h3>Tipos de input</h3></header>
                 <hr>
                 <form action="confirmacion.jsp" method="POST">
@@ -71,15 +56,21 @@ Pagina web Anthony
                         <label>Fecha de ingreso:</label>
                         <input type="date" name="fechaIngre"/>
                         <br/>
+
+
+
                         <label>Fotografía:</label>
                         <input type="file" name="foto"/>
                         <br/>
                         <label>Este código no se ve:</label>
                         <input type="hidden" name="idProducto" value="XHT-001"/>
                         <br/>                    
+
+
                         <label>Contraseña:</label>
                         <input type="password" name="clave"/>
                         <br/>
+
                         <label>Horario:</label>
                         <input type="radio" name="horario" value="M"/> Mañana
                         <input type="radio" name="horario" value="I"/> Intermedio
@@ -89,25 +80,18 @@ Pagina web Anthony
                         <label>Contraseña:</label>
                         <input type="reset" name="Borrar todo"/>
                         <br/>
+
                         <label>Busqueda:</label>
                         <input type="search" name="buscar" placeholder="Buscar..."/>
                     </fieldset>
                     <label>Enviar info</label>
                     <input type="submit" value="Enviar"/>
                 </form>
-                <hr>
-
             </article>
         </section>
-        <!--                             -->
-        <br/>
-        <br/>
-        <hr/>
-        <br/>
+        <hr>
         <footer>
-            <p>
-                Desarrollado por Anthony, Desarrollo web y patrones &COPY;
-            </p>
+            Sitio desarrollado <span>en el curso Web</span> y Patrones 2022 &COPY; 
         </footer>
     </body>
 </html>

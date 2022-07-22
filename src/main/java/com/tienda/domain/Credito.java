@@ -12,8 +12,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="credito")
-public class Credito implements Serializable {
-    
+public class Credito implements Serializable {    
     //Para utilizarlo en la generación de la llave primaria autoincremental
     private static final long serialVersionUID = 1L;
     
@@ -21,7 +20,6 @@ public class Credito implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_credito")
     private Long idCredito;
-    
     private double limite;
 
     public Credito() {  //Constructor default
@@ -29,7 +27,5 @@ public class Credito implements Serializable {
 
     public Credito(double limite) {
         this.limite = limite;
-    }
-
-    
+    }    
 }

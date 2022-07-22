@@ -11,8 +11,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="articulo")
-public class Articulo implements Serializable {
-    
+public class Articulo implements Serializable {    
     //Para utilizarlo en la generación de la llave primaria autoincremental
     private static final long serialVersionUID = 1L;
     
@@ -29,15 +28,11 @@ public class Articulo implements Serializable {
     public Articulo() {  //Constructor default
     }
 
-    public Articulo(String descripcion, String detalle, double precio, int existencias, boolean actvo) {
+    public Articulo(String descripcion, String detalle, double precio, int existencias, boolean activo) {
         this.descripcion = descripcion;
         this.detalle = detalle;
         this.precio = precio;
         this.existencias = existencias;
-        this.activo = actvo;
+        this.activo = activo;
     }
-
-    
-
-    
 }

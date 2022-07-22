@@ -37,8 +37,6 @@ body {
     list-style: none;
 }
 
- 
-
 .nav-menu-item {
     font-size: 18px;
     margin: 0 10px;
@@ -46,12 +44,10 @@ body {
     width: max-content;
 }
 
-
 .nav-menu-link {
     padding: 8px 12px;
     border-radius: 8px;
 }
-
 
 .nav-link {
     color: white;
@@ -66,6 +62,7 @@ body {
 
 .footer {
     background-color: black;
+    color: white;
     text-align: center;
     height: 20px;
     position: fixed;
@@ -81,4 +78,11 @@ body {
     left: 0;
     width: 100%;
     overflow: auto;
+}
+
+.busq{
+    
+     right: -1000px;
+    position: relative;
+    top: 10px;
 }
