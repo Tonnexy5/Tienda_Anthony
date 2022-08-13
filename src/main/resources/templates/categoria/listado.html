@@ -8,31 +8,35 @@
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <div class="contenido">
-        <h2>[[#{categoria.titulo}]]</h2>
-        <a th:href="@{/categoria/nuevo}">Nuevas categorias</a>
-        <div th:if="${categorias != null and !categorias.empty}">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>[[#{categoria.descripcion}]]</th>
-                    <th>[[#{categoria.activo}]]</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="categoria : ${categorias}">
-                    <td th:text="${categoria.descripcion}"></td>
-                    <td style="text-align: center"><input type="checkbox" name="activo" th:checked="${categoria.activo}" disabled="true"></td>
-                       
-                    <td sec: authorize ="hasRole('ROLE_ADMIN')"><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}">Eliminar</a></td>
-                    <td sec: authorize ="hasRole('ROLE_ADMIN')"><a th:href="@{/categoria/modificar/}+${categoria.idCategoria}">Modificar</a></td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
-        <div th:if="${categorias == null or categorias.empty}">
-            [[#{categoria.no_mostrar}]]
-        </div>
+            <h2>[[#{categoria.titulo}]]</h2>
+            <a th:href="@{/categoria/nuevo}" sec:authorize="hasRole('ROLE_ADMIN')">Nueva Categoria</a>
+            <div th:if="${categorias != null and !categorias.empty}">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>[[#{categoria.descripcion}]]</th>
+                            <th>[[#{categoria.activo}]]</th>
+                            <th sec:authorize="hasRole('ROLE_ADMIN')">Eliminar</th>
+                            <th sec:authorize="hasRole('ROLE_ADMIN')">Modificar</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="categoria : ${categorias}">
+                            <td th:text="${categoria.descripcion}"></td>
+                            <td style="text-align: center"><input type="checkbox" name="activo" 
+                                                                  th:checked="${categoria.activo}" disabled="true"></td>
+
+                            <td sec:authorize ="hasRole('ROLE_ADMIN')"><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}">Eliminar</a></td>
+                            <td sec:authorize ="hasRole('ROLE_ADMIN')"><a th:href="@{/categoria/modificar/}+${categoria.idCategoria}">Modificar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${categorias == null or categorias.empty}">
+                No tenemos lista de categorias que mostrar...
+                [[#{categoria.no_mostrar}]]
+            </div>
         </div>
         <footer th:replace="layout/plantilla :: footer"/>
     </body>

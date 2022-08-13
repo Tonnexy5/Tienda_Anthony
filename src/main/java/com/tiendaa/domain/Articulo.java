@@ -25,6 +25,7 @@ public class Articulo implements Serializable {
     private double precio;
     private int existencias;
     private boolean activo;
+    private String imagen;
 
     public Articulo() { //Constructor default
     }
